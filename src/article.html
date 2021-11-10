@@ -1,0 +1,195 @@
+<h2>Rooter un Samsung Galaxy [Tuto]</h2>
+
+<p>Dans ce tutoriel je vous propose d'apprendre la meilleure façon pour <em>rooter</em> votre smartphone <strong>Samsung Galaxy</strong> étape par étape.
+Cette méthode devrait fonctionner pour tous les <strong>Samsung Galaxy</strong> y compris pour le dernier modèle <strong>Samsung Galaxy S10</strong> qui vient juste de sortir (aussitôt que le TWRP sera disponible).</p>
+
+<div class="phones">
+    <img src="./images/samsung_galaxy_s4.jpg"  alt="Samsung Galaxy S4" />
+    <img src="./images/samsung_galaxy_s5.jpg"  alt="Samsung Galaxy S5" />
+    <img src="./images/samsung_galaxy_s6.jpg"  alt="Samsung Galaxy S6" />
+    <img src="./images/samsung_galaxy_s7.jpg"  alt="Samsung Galaxy S7" />
+    <img src="./images/samsung_galaxy_s8.jpg"  alt="Samsung Galaxy S8" />
+    <img src="./images/samsung_galaxy_s9.jpg"  alt="Samsung Galaxy S9" />
+    <img src="./images/samsung_galaxy_s10.jpg" alt="Samsung Galaxy S10" />
+</div>
+
+<p>Avant tout, je vous déconseille fortement l'utilisation de <strong>King Root</strong>, qui va installer <strong>KingrootSU</strong> à la place du <strong>SuperSU</strong> standard dont il sera très difficile de se débarrasser ensuite.
+Si vous êtes dans cette situation et que vous souhaitez supprimer <strong>KingRoot</strong> complètement je vous recommande d'utiliser <strong><a href="https://play.google.com/store/apps/details?id=darkslide.com.supersumepro" target="_blank" rel="noopener noreferrer nofollow">Super-SUMe</a></strong>, si vous ne souhaitez pas acheter la version pro, il existe également une version qui se finance par la publicité.</p>
+
+<ol>
+<li><a href="#telecharger-et-installer-les-pilotes-usb-android">Télécharger et installer les <strong>pilotes USB Android</strong></a></li>
+<li><a href="#telecharger-et-installer-odin">Télécharger et installer <strong>Odin</strong></a></li>
+<li><a href="#telecharger-le-custom-recovery-twrp">Télécharger le <strong>"Custom Recovery" (TWRP)</strong></a></li>
+<li><a href="#telecharger-le-fichier-de-root-flashable-supersu">Télécharger le <strong>fichier de root flashable (SuperSU)</strong></a></li>
+<li><a href="#desactivez-le-verouillage-oem-de-votre-smartphone"><strong>Désactivez le vérouillage OEM</strong> de votre smartphone</a></li>
+<li><a href="#redemarrer-son-samsung-galaxy-en-mode-download">Redémarrer son <strong>Samsung Galaxy</strong> en mode <em>"Download"</em></a></li>
+<li><a href="#flasher-le-twrp-sur-son-samsung-galaxy"><strong>Flasher le TWRP</strong> sur son Samsung Galaxy</a></li>
+<li><a href="#utiliser-twrp-pour-installer-le-root-et-supersu">Utiliser TWRP pour <strong>installer le root et SuperSu</strong></a></li>
+</ol>
+
+<p>Astuces Bonus:</p>
+
+<ul>
+<li><a href="#comment-flasher-une-rom-custom">Comment Flasher Une ROM Custom</a></li>
+<li><a href="#comment-restaurer-mon-samsung-galaxy-dans-son-etat-dorigine">Comment restaurer mon Samsung Galaxy dans son état d’origine</a></li>
+</ul>
+
+<h2>Télécharger et installer les Pilotes USB Android</h2>
+
+<p>Comment installer les pilotes usb de votr téléphone ? C'est très simple, sous <strong>Windows 10</strong> les pilotes USB pour smartphones android devraient être disponibles par défaut. 
+Si ce n'est pas le cas ou que vous utilisez une autre version de Windows, téléchargez le fichier <em><a href="https://developer.samsung.com/galaxy/others/android-usb-driver-for-windows" target="_blank" rel="noopener noreferrer nofollow">SAMSUNG_USB_Driver_for_Mobile_Phones.zip</a></em> sur la page officielle Samsung : <strong><a href="https://developer.samsung.com/galaxy/others/android-usb-driver-for-windows" target="_blank" rel="noopener noreferrer nofollow">https://developer.samsung.com/galaxy/others/android-usb-driver-for-windows</a></strong>
+Décompressez l'archive et exécutez le programme d'installation des <em>drivers</em> de votre appareil android.</p>
+
+<h2>Télécharger et installer Odin</h2>
+
+<p><strong>Odin</strong> est le logiciel <em>Windows</em> qui permet de <em>"flasher"</em> une <em>rom</em>  sur votre smartphone. Téléchargez la version 3.13.1 de <strong><a href="https://samsungodin.com" target="_blank" rel="noopener noreferrer nofollow">Odin</a></strong> (<strong><a href="https://samsungodin.com" target="_blank" rel="noopener noreferrer nofollow">https://samsungodin.com</a></strong>) et installez l'application sur votre ordinateur.</p>
+
+<h2>Télécharger le "Custom Recovery" (TWRP)</h2>
+
+<p><strong>TWRP</strong> est l'acronyme de <em>"TeamWin Recovery Project"</em>, c'est un firmware custom tactile en mode graphique pour remplacer la partition de <em>"recovery"</em> de votre smartphone.
+Les fichiers sont disponibles sur la page de la communauté <strong><a href="https://twrp.me" target="_blank" rel="noopener noreferrer nofollow">TeamWin</a></strong> à <strong><a href="https://twrp.me" target="_blank" rel="noopener noreferrer nofollow">cette adresse</a></strong>: <strong><a href="https://twrp.me" target="_blank" rel="noopener noreferrer nofollow">https://twrp.me</a></strong>.</p>
+
+<p>Téléchargez le firmware TWRP qui correspond au modèle de votre smartphone <strong><a href="https://twrp.me/Devices" target="_blank" rel="noopener noreferrer nofollow">ici</a></strong> : <strong><a href="https://twrp.me/Devices" target="_blank" rel="noopener noreferrer nofollow">https://twrp.me/Devices</a></strong></p>
+
+<p>Par exemple, le modèle exact de mon téléphone <strong>Samsung Galaxy J5</strong> est <strong><a href="https://eu.dl.twrp.me/j5nlte" target="_blank" rel="noopener noreferrer nofollow">SM-J500FN</a></strong>, le TWRP correspondant est disponible <strong><a href="https://eu.dl.twrp.me/j5nlte" target="_blank" rel="noopener noreferrer nofollow">ici</a></strong>: <strong><a href="https://eu.dl.twrp.me/j5nlte" target="_blank" rel="noopener noreferrer nofollow">https://eu.dl.twrp.me/j5nlte</a></strong>
+Attention, pour certains smartphones le fichier ne va peut-être pas fonctionner ou ne sera tout simplement pas disponible. Cette opération se fait à vos risques et périls.</p>
+
+<h2>Télécharger le fichier de root flashable (SuperSU)</h2>
+
+<p><em>"SuperSU"</em> est l'application android qui permet de gèrer les autorisations utilisateurs et les accès <em>"root"</em>, c'est une fonctionalité indispensable pour la sécurité de votre téléphone.</p>
+
+<p>Vous devez maintenant télécharger le fichier de <em>"Super SU"</em> au format <em>.zip</em> en version <em>"Recovery Flashable"</em> qui vous permettra d'effectivement <em>"rooter"</em> votre système.
+Je vous recommande la version "UPDATE-SuperSU-v2.82-20170528234214.zip" si elle est disponible.
+J'ai pu la trouver <strong><a href="https://download.chainfire.eu/1113/SuperSU/UPDATE-SuperSU-v2.82-20170528234214.zip" target="_blank" rel="noopener noreferrer nofollow">ici</a></strong> : <strong><a href="https://download.chainfire.eu/1113/SuperSU/UPDATE-SuperSU-v2.82-20170528234214.zip" target="_blank" rel="noopener noreferrer nofollow">https://download.chainfire.eu/1113/SuperSU/UPDATE-SuperSU-v2.82-20170528234214.zip</a></strong></p>
+
+<p>Au moment ou j'écris ces lignes le fichier <strong><a href="http://www.supersu.com/download" target="_blank" rel="noopener noreferrer nofollow">SuperSU-v2.82-201705271822.zip</a></strong> n'est pas disponible sur le site <strong><a href="http://www.supersu.com/download" target="_blank" rel="noopener noreferrer nofollow">supersu.com</a></strong>
+mais vous pourrez peut être le trouver <strong><a href="https://download.chainfire.eu/1220/SuperSU" target="_blank" rel="noopener noreferrer nofollow">ici</a></strong>: <strong><a href="https://download.chainfire.eu/1220/SuperSU" target="_blank" rel="noopener noreferrer nofollow">https://download.chainfire.eu/1220/SuperSU</a></strong></p>
+
+<p>Sinon, je vous suggère de faire une recherche google sur ce fichier.</p>
+
+<h2>Désactivez le vérouillage OEM de votre smartphone</h2>
+
+<p>D'abord, activez le <strong>"mode développeur"</strong>, entrez dans les <strong>"Paramètres"</strong>, puis ouvrez le menu <strong>"À propos de l'appareil"</strong> puis cliquez une dizaine de fois sur le <strong>"Numéro de version"</strong>.</p>
+
+<p>Le menu <strong>"Options de développement"</strong> devrait apparaitre dans les paramètres, activez l'option <strong>"Déverrouillage OEM"</strong>.</p>
+
+<p>Si vous n'activez pas cette option, il sera impossible de démarrer votre téléphone après le <em>root</em> et vous serez obligé de flasher votre téléphone avec une <em>ROM</em> officele pour pour l'utiliser à nouveau.</p>
+
+<h2>Redémarrer son Samsung Galaxy en mode "Download"</h2>
+
+<p>Par sécurité assurez vous d'avoir suffisament de batterie (au moins 50%), puis éteingnez votre smartphone. Je vous recommande également de faire une sauvegarde de vos donnée avant d'aller plus loin.</p>
+
+<p>Pour redémarrer en mode <em>"Download"</em> maintenez enfoncés les boutons <kbd>Volume -</kbd> <kbd>Home</kbd> <kbd>Power</kbd> (<strong>Volume -</strong>, <strong>Accueil</strong> et <strong>Mise en route</strong>).
+Quand votre téléphone vibre, vous pouvez relâcher le bouton <strong>Power</strong> en maintenant les 2 autres appuyés, jusqu'à ce qu'un message s'affiche.</p>
+
+<p><img src="./images/download_mode_samsung_galaxy_j5.jpg" alt="Illustration de l'activation du mode download sur Samsung Galaxy J5" /></p>
+
+<p>Pour passer l'avertissement de sécurité du <strong>Bootloader</strong> de votre Samsung Galaxy appuyez sur le bouton <kbd>Volume +</kbd> pour entrer dans le mode <strong>Download</strong>.
+Une fois dans le mode <em>"Download"</em>, brancher le smartphone sur le PC, et patientez que <em>Windows</em> installe les pilotes USB et que <em>Odin</em> détecte le smartphone.</p>
+
+<h2>Flasher le TWRP sur son Samsung Galaxy</h2>
+
+<p>Si vous ne l'avez pas déjà fait ouvrez <em>Odin</em> puis cliquez sur le boutnon <em>"AP"</em> et sélectionnez le fichier <strong>TWRP-recovery</strong> que vous avez téléchargé (il doit être en .tar ou .tar.md5)</p>
+
+<p><img src="./images/odin3_v3.13.1.jpg" alt="odin3_v3.13.1" /></p>
+
+<p>Avant de cliquer sur <em>Start</em>, vérifiez que toutes les cases sont cochées comme sur l'image ci-dessus.</p>
+
+<ol>
+<li>Lorque vous branchez votre smartphone en mode <em>"download"</em>, le message <em>"ID:COM"</em> s'active dans l'interface <em>d'Odin</em>.</li>
+<li>Cliquez sur l'onglet <em>"Options"</em>.</li>
+<li>La case <em>"Auto-Reboot"</em> n'est pas indispensable, elle permet simplement de redémarrer votre téléphone automatiquement à la fin de l'opération.</li>
+<li>La case <em>"Re-Partition"</em> <strong>ne doit surtout pas être cochée</strong>, sinon vous risquez d'endommager votre téléphone.</li>
+<li>La case <em>"F. Reset Time"</em> doit être cochée également.</li>
+<li>Dans le cadre de droite, la case <em>"AP"</em> doit être cochée et le champ associé doit contenir le chemin vers le fichier que vous souhiatez flasher.</li>
+<li><strong>Ne débranchez surtout pas votre smartphone</strong> après avoir appuyé sur le bouton <em>"Start"</em>.</li>
+</ol>
+
+<p>Quand vous verrez le message <strong>"PASS"</strong> en vert, débranchez le câble USB et allumez votre smartphone, s'il se bloque au démarrage, démarrer le en mode Recovery (<kbd>Volume +</kbd> <kbd>Home</kbd> <kbd>Power</kbd>) et faites un <em>Wipe Data/Factory Reset</em>.</p>
+
+<h2>Redémarrer son Samsung Galaxy en mode "Recovery"</h2>
+
+<p>Pour redémarrer en mode <em>"Recovery"</em> maintenez enfoncés les boutons <kbd>Volume +</kbd>, <kbd>Home</kbd>, <kbd>Power</kbd> quand votre téléphone vibre, vous pouvez relâcher le bouton d'alimentation mais maintenez enfoncé les 2 autres.</p>
+
+<p><img src="./images/recovery_mode_samsung_galaxy_j5.jpg" alt="Illustration de l'activation du mode recovery sur Samsung Galaxy J5" /></p>
+
+<h2>Utiliser TWRP pour installer le root et SuperSu</h2>
+
+<p>Connectez votre téléphone et copiez l'archive <strong>"SuperSU"</strong> sur la carte SD de votre smartphone.
+Redémarrer votre téléphone en mode <em>"Recovery"</em>, accèdez au menu pour <em>flasher</em> le <em>root</em>.</p>
+
+<p>Cliquez sur <em>"Install"</em>, selectionnez le fichier <strong>"SuperSU"</strong> que vous avez précédemment copié, puis cliquez sur le bouton <em>"Install Image"</em>.
+Redémarrez votre téléphone quand l'opération est terminée.</p>
+
+<p>Si votre téléphone se bloque au démarrage, démarrer le en mode <em>"Recovery"</em> (<kbd>Volume +</kbd> <kbd>Home</kbd> <kbd>Power</kbd>) et faites un <em>"Wipe Data/Factory Reset"</em>. (Attention: Toutes les données de votre téléphone seront perdues si vous ne les aviez pas précédemment sauvegardées).</p>
+
+<h2>Pourquoi rooter mon Samsung Galaxy ?</h2>
+
+<p>Voilà votre smartphone <strong>Samsung Galaxy</strong> est rooté, vous pouvez maintenant utiliser votre appareil sans limitations. Par exemple vous pouvez maintenant:</p>
+
+<ul>
+<li>Supprimer les applications système superflues avec "<strong><a href="https://play.google.com/store/apps/details?id=com.jumobile.manager.systemapp" target="_blank" rel="noopener noreferrer nofollow">Désinstalleur App Sytème</a></strong>"</li>
+<li>Sauvegarder vos application et vos données avec "<strong><a href="https://play.google.com/store/apps/details?id=com.keramidas.TitaniumBackup" target="_blank" rel="noopener noreferrer nofollow">Titanium Backup</a></strong>"</li>
+<li>Bloquer les publicités avec "<strong><a href="https://adaway.org" target="_blank" rel="noopener noreferrer nofollow">AdAway</a></strong>"</li>
+<li>Mettre en place des règles de pare feu avec "<strong><a href="https://play.google.com/store/apps/details?hl=en&amp;id=dev.ukanth.ufirewall" target="_blank" rel="noopener noreferrer nofollow">AFWall+</a></strong>"</li>
+<li>Accèder à la racine de votre appareil avec <strong><a href="http://www.estrongs.com" target="_blank" rel="noopener noreferrer nofollow">ES Explorateur de Fichiers</a></strong></li>
+<li>Utiliser toute la puissance d'Android en ligne de commande avec "<strong><a href="https://play.google.com/store/apps/details?id=com.termux" target="_blank" rel="noopener noreferrer nofollow">Termux</a></strong>"</li>
+</ul>
+
+<p>Attention, à partir du moment où vous aurez rooté votre smartphone, <strong>vous ne pourrez plus bénéficier de la mise à jour automatique de votre système</strong>.
+Vous devrez faire cette mise à jour manuellement avec <em>Odin</em> en suivant la procédure décrite au chapitre <a href="#comment-restaurer-mon-samsung-galaxy-dans-son-etat-dorigine">Comment restaurer mon Samsung Galaxy dans son état d'origine</a>.</p>
+
+<h1>Comment Flasher Une ROM Custom</h1>
+
+<h2>Télécharger une ROM custom</h2>
+
+<p>Les ROMs cutoms sont devenues beaucoup moins pertinentes surtout depuis que <strong>CyanogenMod</strong> à disparu et aussi il faut avouer que les ROMs officielles <strong>Samsung</strong> ont étées vraiment améliorées.
+Mais si toutefois il vous prenait l'envie d'éssayer <strong>Lineage</strong> le successseur de <strong>CyanogenMod</strong> ou une autre ROM custom de votre préférence, je vous propose de suivre ces quelques conseils.</p>
+
+<p>Il y a au moment ou j'écris ces lignes surtout trois principales ROMs custom intéressantes à tester sur votre <strong>Samsung Galaxy</strong>, vous pouvez les télécharger sur les pages suivvantes:</p>
+
+<ul>
+<li><strong><a href="https://download.lineageos.org" target="_blank" rel="noopener noreferrer nofollow">Lineage</a></strong>: <strong><a href="https://download.lineageos.org" target="_blank" rel="noopener noreferrer nofollow">https://download.lineageos.org</a></strong></li>
+<li><strong><a href="http://download.dirtyunicorns.com" target="_blank" rel="noopener noreferrer nofollow">Dirty Unicorns</a></strong>: <strong><a href="http://download.dirtyunicorns.com" target="_blank" rel="noopener noreferrer nofollow">http://download.dirtyunicorns.com</a></strong></li>
+<li><strong><a href="https://slimroms.org/#/download" target="_blank" rel="noopener noreferrer nofollow">Slimroms</a></strong>: <strong><a href="https://slimroms.org/#/download" target="_blank" rel="noopener noreferrer nofollow">https://slimroms.org/#/download</a></strong></li>
+</ul>
+
+<h2>Flashez la ROM custom</h2>
+
+<p>Appliquez les étapes 6 et 7 de ce tutoriel, mais sélectionnez la ROM custom que vous avez téléchargée dans le champm <em>"AP"</em> <em>d'Odin</em>.</p>
+
+<ol>
+<li><a href="#redemarrer-son-samsung-galaxy-en-mode-download">Redémarrer son <strong>Samsung Galaxy</strong> en mode <em>"Download"</em></a></li>
+<li><a href="#flasher-le-twrp-sur-son-samsung-galaxy"><strong>Flasher le TWRP</strong> sur son Samsung Galaxy</a></li>
+</ol>
+
+<h1>Comment restaurer mon Samsung Galaxy dans son état d'origine</h1>
+
+<h2>Télécharger le Firmware Samsung</h2>
+
+<p>Téléchargez le firmware pour votre smartphone, vous pouvez en trouver sur le site <strong><a href="" target="_blank" rel="noopener noreferrer nofollow"></a></strong><a href="http://www.sammobile.com/firmwares">Sammobile</a> (en anglais) (<a href="http://www.sammobile.com/firmwares">http://www.sammobile.com/firmwares</a>)
+ou <strong><a href="" target="_blank" rel="noopener noreferrer nofollow"></a></strong><a href="https://www.phonandroid.com">Phonandroid</a></p>
+
+<p>Attention vous devez télécharger le firmware (la ROM) qui correspond au <em>"Numéro du modèle"</em> exact de votre smartphone.
+Vous le trouverez dans le menu <em>"À propos de l'appareil"</em> dans les <em>"Paramètres"</em> de votre téléphone.</p>
+
+<p>Par exemple je possède un <strong>Samsung Galaxy J3</strong>, le numéro de modèle exact est <strong>SM-J320FN</strong>, j'ai pu trouver les ROMs Samsung officielles ici:
+- <strong><a href="https://www.sammobile.com/firmwares/galaxy-j3/SM-J320FN" target="_blank" rel="noopener noreferrer nofollow">https://www.sammobile.com/firmwares/galaxy-j3/SM-J320FN</a></strong>
+- <strong><a href="https://www.phonandroid.com/forum/threads/roms-liste-des-roms-officielles-pour-samsung-galaxy-j3-sm-j320fn.147869" target="_blank" rel="noopener noreferrer nofollow">https://www.phonandroid.com/forum/threads/roms-liste-des-roms-officielles-pour-samsung-galaxy-j3-sm-j320fn.147869</a></strong></p>
+
+<p>Je possède aussi un <strong>Samsung Galaxy J5</strong>, son numéro de modèle est <strong>SM-J500FN</strong>
+- <strong><a href="https://www.sammobile.com/firmwares/galaxy-j5/SM-J500FN" target="_blank" rel="noopener noreferrer nofollow">https://www.sammobile.com/firmwares/galaxy-j5/SM-J500FN</a></strong>
+- <strong><a href="https://www.phonandroid.com/forum/threads/roms-liste-des-roms-officielles-pour-samsung-galaxy-j5-sm-j500fn.129968" target="_blank" rel="noopener noreferrer nofollow">https://www.phonandroid.com/forum/threads/roms-liste-des-roms-officielles-pour-samsung-galaxy-j5-sm-j500fn.129968</a></strong></p>
+
+<h2>Flashez le Firmware Samsung</h2>
+
+<p>Appliquez les étapes 6 et 7 de ce tutoriel, mais sélectionnez la ROM officielle que vous avez précédemment téléchargé dans le champ <em>"AP"</em> <em>d'Odin</em>.</p>
+
+<ol>
+<li><a href="#redemarrer-son-samsung-galaxy-en-mode-download">Redémarrer son <strong>Samsung Galaxy</strong> en mode <em>"Download"</em></a></li>
+<li><a href="#flasher-le-twrp-sur-son-samsung-galaxy"><strong>Flasher le TWRP</strong> sur son Samsung Galaxy</a></li>
+</ol>
+
+<p>Après l'opération, la partition de <em>"recovery"</em> sera aussi remplacée (pour une raison que j'ignore).</p>
+
+<p>Redémarrez votre téléphone, s'il se bloque démarrez le en mode <em>"Recovery"</em> (<kbd>Volume +</kbd> <kbd>Home</kbd> <kbd>Power</kbd>) et faites un <em>"Wipe Data/Factory Reset"</em>. (Attention: Toutes les données de votre téléphone seront perdues si vous ne les aviez pas précédemment sauvegardées).</p>
